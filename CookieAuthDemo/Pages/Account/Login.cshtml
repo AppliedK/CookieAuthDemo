@@ -9,16 +9,20 @@
         <tr>
             <td><label asp-for="UserSignIn.Name"></label></td>
             <td><input type="text" asp-for="UserSignIn.Name" /></td>
+            <td><span asp-validation-for="UserSignIn.Name"></span></td>
         </tr>
         <tr>
             <td><label asp-for="UserSignIn.Password" ></label></td>
             <td><input type="password" asp-for="UserSignIn.Password" /></td>
+            <td><span asp-validation-for="UserSignIn.Password"></span></td>
         </tr>
         <tr>
             <td colspan="2" style="text-align:right"> <input type="submit"  /></td>
+            <td></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="hidden" asp-for="UserSignIn.Role" value="@ViewData["role"]" /></td>
+            <td colspan="2"><input type="hidden" asp-for="UserSignIn.Role" value="@TempData["role"]??:"admin" /></td>
+            <td><span asp-validation-for="UserSignIn.Role"></span></td>
         </tr>
     </table>
 </form>
