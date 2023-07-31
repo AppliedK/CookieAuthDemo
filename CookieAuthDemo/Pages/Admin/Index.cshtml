@@ -1,0 +1,9 @@
+﻿@page
+@model CookieAuthDemo.Pages.Admin.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>You are on Index page of Admin</h1>
+<h3>Is user authenticated: @User.Identity.IsAuthenticated</h3>
+<h3>User name: @User.Identity.Name</h3> 
+
+<h1><a asp-page-handler="Signout">Signout</a></h1>

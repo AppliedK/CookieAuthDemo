@@ -1,0 +1,12 @@
+﻿@page
+@model CookieAuthDemo.Pages.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div style="background-color:cyan;width:40%;margin-left:10px">
+    <h3 style="text-align:right;margin-right:10px">Username: @User.Identity.Name</h3>
+    <h1>Index of Root page</h1>
+    <h3><a asp-page="Admin/Index">Go to Index page of Admin</a></h3>
+    <br/>
+    <br/>
+</div>
+

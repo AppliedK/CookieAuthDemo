@@ -1,0 +1,25 @@
+﻿@page
+@model CookieAuthDemo.Pages.Account.LoginModel
+@using CookieAuthDemo.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1>Login here</h1>
+
+<form method="post">
+    <table>
+        <tr>
+            <td><label asp-for="UserSignIn.Name"></label></td>
+            <td><input type="text" asp-for="UserSignIn.Name" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="UserSignIn.Password" ></label></td>
+            <td><input type="password" asp-for="UserSignIn.Password" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:right"> <input type="submit"  /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="hidden" asp-for="UserSignIn.Role" value="@ViewData["role"]" /></td>
+        </tr>
+    </table>
+</form>
+<br />
